@@ -1,20 +1,19 @@
-import React from 'react';
-import './app.css';
-import logo from './logo_og.png';
+import React, { Component } from 'react';
 
-export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: `[TECH.IO] React template`
-        };
-    }
-    render() {
-        return (<div>
-            <img className='logo' src={logo}></img>
-            <h1 className='title'>
-                {this.state.title}
-            </h1>
-        </div>);
-    }
+class App extends Component {
+  constructor(props){
+    super(props);
+  }
+  handleEvent(){
+    alert(this.props);
+  }
+  render() {
+    return (
+      <div className="App">
+        <button onClick={this.handleEvent}>Please Click</button>
+      </div>
+    );
+  }
 }
+
+export default App;
