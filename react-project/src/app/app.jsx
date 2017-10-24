@@ -5,7 +5,7 @@ class App extends Component {
     super(props);
   }
   handleEvent(){
-    alert(this.props);
+    console.log(this.props);
   }
   render() {
     return (
