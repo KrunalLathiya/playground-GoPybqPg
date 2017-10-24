@@ -99,4 +99,31 @@ So, we can achieve two purposes with the constructor function.
 1. Set the initial state of the component
 2. Point the global context of this keyword.
 
-@[Sample React App Boilerplate]({"stubs": ["src/app/app.jsx", "src/app/app1.jsx", "src/main.js", "src/index.tpl.html"], "command": "./run.sh"})
+ # Arrow Functions
+
+ If you are using arrow functions then, you do not need to bind any event to this. In that scenario, <b>this</b> scope is global and not limited to any calling function. So If you are using ES6 syntax, then it is best practice to use <b>Arrow Function</b>
+
+ ```javascript
+ import React, { Component } from 'react';
+
+class App2 extends Component {
+  constructor(props){
+    super(props);
+  }
+  handleEvent = () => {
+    console.log(this.props);
+  }
+  render() {
+    return (
+      <div className="App">
+        <button onClick={this.handleEvent}>Please Click</button>
+      </div>
+    );
+  }
+}
+
+export default App2;
+ ```
+
+Here, I have not bind <b>this</b> in to the constructor.
+@[ReactJS Constructor Tutorial]({"stubs": ["src/app/app.jsx", "src/app/app1.jsx", "src/app/app2.jsx", "src/main.js", "src/index.tpl.html"], "command": "./run.sh"})
