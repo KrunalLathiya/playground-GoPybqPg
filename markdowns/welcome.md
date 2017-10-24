@@ -99,4 +99,4 @@ So, we can achieve two purposes with the constructor function.
 1. Set the initial state of the component
 2. Point the global context of this keyword.
 
-@[Sample React App Boilerplate]({"stubs": ["src/app/app.jsx", "src/app/app1.jsx", "src/main.js"], "command": "./run.sh"})
+@[Sample React App Boilerplate]({"stubs": ["src/app/app.jsx", "src/app/app1.jsx", "src/main.js", "src/index.tpl.html"], "command": "./run.sh"})
